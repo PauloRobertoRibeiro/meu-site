@@ -1,115 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="/css/JavaScript/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minha Primeira Página</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 
-    "></script>
-    <title>Minha Primeira Pagina</title>
+  <!-- JavaScript -->
+  <script src="javascript/script.js" defer></script>
 
-    <!-- Script do EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("yENHhFQ38MjVQpefy"); // Coloque seu Public Key aqui
-      })();
-    </script>
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("yENHhFQ38MjVQpefy"); // Public Key
+    })();
+  </script>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header id="inicio">
-        <h1>Pagina Inicial</h1>
-    </header>
-    
-    <!-- Menu de Navegação -->
-    <nav>
-        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
- 
-        <ul id="menu">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+  <!-- Cabeçalho -->
+  <header id="inicio">
+    <h1>Página Inicial</h1>
+  </header>
 
-    <img src="imagens/music-154176_1280.png" alt="Minha foto de perfil" class="foto-perfil">
+  <!-- Menu de Navegação -->
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul id="menu">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#sobre">Sobre Mim</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
+  <!-- Imagem de Destaque -->
+  <img src="fotos/fotomusic.png/music-154176_1280.png" alt="Minha imagem de destaque" class="foto-perfil" />
 
-    <!-- Sobre Mim -->
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <img src="imagens/minhafoto.png" alt="Minha foto de perfil" class="foto-perfil">
-        <p>Olá! Eu sou Paulo Roberto Ribeiro, estou começando a "entrar" neste universo, web design com HTML, CSS, JavaScript ... e outras linguagens para criar sites e compartilhar minhas ideias.</p>
-        <p>Minha meta é tornar-me um desenvolvedor web e contribuir com projetos criativos e inovadores.</p>  
-    </section>
+  <!-- Sobre Mim -->
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <img src="fotos/minhafoto.png/minhafoto.png" alt="Minha foto de perfil" class="foto-perfil" />
+    <p>Olá! Eu sou Paulo Roberto Ribeiro, estou começando a "entrar" neste universo, web design com HTML, CSS, JavaScript ... e outras linguagens para criar sites e compartilhar minhas ideias.</p>
+    <p>Minha meta é tornar-me um desenvolvedor web e contribuir com projetos criativos e inovadores.</p>
+  </section>
 
-    <!-- Habilidades -->
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Design de interfaces</li>
-            <li>SEO básico</li>
-        </ul>
-    </section>
+  <!-- Habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Design de interfaces</li>
+      <li>SEO básico</li>
+    </ul>
+  </section>
 
-    <!-- Projetos -->
-    <section id="projetos">
-        <h2>Projetos</h2>
-        <ul>
-            <li><a href="https://meuprojeto1.com" target="_blank">Projeto 1: [Nome do Projeto]</a> - Descrição do projeto.</li>
-            <li><a href="https://meuprojeto2.com" target="_blank">Projeto 2: [Nome do Projeto]</a> - Descrição do projeto.</li>
-        </ul>
-    </section>
+  <!-- Projetos -->
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <ul>
+      <li><a href="https://meuprojeto1.com" target="_blank">Projeto 1: [Nome do Projeto]</a> - Descrição do projeto.</li>
+      <li><a href="https://meuprojeto2.com" target="_blank">Projeto 2: [Nome do Projeto]</a> - Descrição do projeto.</li>
+    </ul>
+  </section>
 
-    <!-- Contato -->
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Gostaria de falar comigo? Me envie uma mensagem!</p>
-        
-        <form id="form-contato">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" required><br><br>
+  <!-- Contato -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Gostaria de falar comigo? Me envie uma mensagem!</p>
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" required><br><br>
+    <form id="form-contato">
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" required />
 
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea name="mensagem" rows="4" required></textarea><br><br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" required />
 
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" rows="4" required></textarea>
 
-    <!-- Script para enviar formulário via EmailJS -->
-    <script>
-        document.getElementById('form-contato').addEventListener('submit', function(event) {
-            event.preventDefault();
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-            emailjs.sendForm('service_dod41n7', 'template_ux4h87o', this)
-                .then(function(response) {
-                    alert('Mensagem enviada com sucesso!');
-                    document.getElementById('form-contato').reset(); // limpa o formulário
-                }, function(error) {
-                    alert('Ocorreu um erro. Tente novamente mais tarde.');
-                    console.error('Erro:', error);
-                });
+  <!-- Script do formulário -->
+  <script>
+    document.getElementById('form-contato').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_dod41n7', 'template_ux4h87o', this)
+        .then(function (response) {
+          alert('Mensagem enviada com sucesso!');
+          document.getElementById('form-contato').reset();
+        }, function (error) {
+          alert('Ocorreu um erro. Tente novamente mais tarde.');
+          console.error('Erro:', error);
         });
-    </script>
+    });
+  </script>
 
-    <a href="#inicio" class="voltar-topo">↑ Topo</a>
+  <!-- Voltar ao Topo -->
+  <a href="#inicio" class="voltar-topo">↑ Topo</a>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Paulo Roberto Ribeiro</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Paulo Roberto Ribeiro</p>
+  </footer>
 </body>
 </html>
