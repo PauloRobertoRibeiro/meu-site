@@ -1,174 +1,192 @@
+/* Estilo geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  .foto-perfil {
-    display: block;
-    margin: 0 auto 20px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  nav {
-    background-color: #333;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Imagens gerais */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Imagem de perfil */
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: #333;
+}
+
+/* Botão do menu (modo mobile) */
+.menu-toggle {
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+/* Lista de links do menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2.5em;
+  margin-top: 30px;
+}
+
+h2, p {
+  text-align: center;
+}
+
+/* Seções da página */
+section {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão "Voltar ao topo" */
+.voltar-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.voltar-topo:hover {
+  background-color: #555;
+}
+
+/* Rodapé */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
   .menu-toggle {
-    display: none;
-    background-color: #333;
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
+    display: block;
   }
-  
+
   nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    background-color: #555;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-top: 30px;
-  }
-  
-  h2, p {
-    text-align: center;
-  }
-  
-  section {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .voltar-topo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease;
-  }
-  
-  .voltar-topo:hover {
-    background-color: #555;
-  }
-  
-  footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      display: none;
-      text-align: center;
-    }
-  
-    nav ul.show {
-      display: flex;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-  
-    .foto-perfil {
-      width: 80%;
-      max-width: 300px;
-    }
-  }
-  form {
-    display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
+    display: none;
+    text-align: center;
   }
-  
-  form label {
-    font-weight: bold;
-    text-align: left;
+
+  nav ul.show {
+    display: flex;
   }
-  
-  form input,
-  form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    resize: vertical;
+
+  nav ul li {
+    margin: 10px 0;
   }
-  
-  form button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    border: none;
-    font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .foto-perfil {
+    width: 80%;
+    max-width: 300px;
   }
-  
-  form button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+/* Formulário de contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
